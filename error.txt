@@ -1,0 +1,61 @@
+2018-03-24 19:05:05.7954|ERROR|Infraestructura.Framework.Logs.ServicioLogs|El mensaje con el id:5no puedo ser enviado->Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text="Unexpected Exception", classId=0, methodId=0, cause=System.IO.IOException: No se puede escribir datos de en la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto. ---> System.Net.Sockets.SocketException: Se ha forzado la interrupción de una conexión existente por el host remoto
+   en System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   en System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en RabbitMQ.Client.Impl.Frame.ReadFrom(NetworkBinaryReader reader)
+   en RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   en RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   en RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   en RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   en RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   en RabbitMQ.Client.Framing.Impl.Model._Private_BasicConsume(String queue, String consumerTag, Boolean noLocal, Boolean autoAck, Boolean exclusive, Boolean nowait, IDictionary`2 arguments)
+   en RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   en RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   en RabbitMQ.Client.IModelExensions.BasicConsume(IModel model, String queue, Boolean autoAck, IBasicConsumer consumer)
+   en RabbitMQ.Client.MessagePatterns.Subscription..ctor(IModel model, String queueName, Boolean autoAck)
+   en Adaptadores.AMQP.Recibir.Recibir.ServicioRecibirMensaje.SuscribirMensaje(Mensaje mensajes) en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP.Recibir\Recibir\ServicioRecibirMensaje.cs:línea 44
+2018-03-24 19:05:14.2346|ERROR|Infraestructura.Framework.Logs.ServicioLogs|El mensaje con el id:5no puedo ser enviado->Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=0, text="End of stream", classId=0, methodId=0, cause=System.IO.IOException: No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto. ---> System.Net.Sockets.SocketException: Se ha forzado la interrupción de una conexión existente por el host remoto
+   en System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   en System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   en System.IO.BufferedStream.Flush()
+   en System.IO.BinaryWriter.Flush()
+   en RabbitMQ.Client.Impl.SocketFrameHandler.WriteFrame(Frame frame)
+   en RabbitMQ.Client.Framing.Impl.Connection.HeartbeatWriteTimerCallback(Object state)
+   en RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   en RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   en RabbitMQ.Client.Impl.RecoveryAwareModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   en RabbitMQ.Client.Impl.AutorecoveringModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   en Adaptadores.AMQP.Recibir.Recibir.ServicioRecibirMensaje.SuscribirMensaje(Mensaje mensajes) en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP.Recibir\Recibir\ServicioRecibirMensaje.cs:línea 57
+2018-03-24 19:06:50.9366|ERROR|Infraestructura.Framework.Logs.ServicioLogs|None of the specified endpoints were reachable; No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto.; Se ha forzado la interrupción de una conexión existente por el host remoto
+   en RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   en RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   en Adaptadores.AMQP.Conexion.ServicioConexion.Conectar() en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP\Conexion\ServicioConexion.cs:línea 32
+2018-03-24 19:06:50.9986|ERROR|Infraestructura.Framework.Logs.ServicioLogs|El mensaje con el id:5no puedo ser enviado->Referencia a objeto no establecida como instancia de un objeto.
+   en Adaptadores.AMQP.Recibir.Recibir.ServicioRecibirMensaje.SuscribirMensaje(Mensaje mensajes) en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP.Recibir\Recibir\ServicioRecibirMensaje.cs:línea 32
+2018-03-24 19:17:06.4604|ERROR|Infraestructura.Framework.Logs.ServicioLogs|El mensaje con el id:5no puedo ser enviado->Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text="Unexpected Exception", classId=0, methodId=0, cause=System.IO.IOException: No se puede escribir datos de en la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto. ---> System.Net.Sockets.SocketException: Se ha forzado la interrupción de una conexión existente por el host remoto
+   en System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   en System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en RabbitMQ.Client.Impl.Frame.ReadFrom(NetworkBinaryReader reader)
+   en RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   en RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   en RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   en RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   en RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   en RabbitMQ.Client.Impl.RecoveryAwareModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   en RabbitMQ.Client.Impl.AutorecoveringModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   en Adaptadores.AMQP.Recibir.Recibir.ServicioRecibirMensaje.SuscribirMensaje(Mensaje mensajes)
+2018-03-24 19:55:51.9663|ERROR|Infraestructura.Framework.Logs.ServicioLogs|El mensaje con el id:5no puedo ser enviado->No se pueden leer los datos de la conexión de transporte: Se ha forzado la interrupción de una conexión existente por el host remoto.; Se ha forzado la interrupción de una conexión existente por el host remoto
+   en System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   en System.IO.BufferedStream.Flush()
+   en System.IO.BinaryWriter.Flush()
+   en RabbitMQ.Client.Impl.SocketFrameHandler.WriteFrame(Frame frame)
+   en RabbitMQ.Client.Impl.Command.TransmitAsSingleFrame(Int32 channelNumber, Connection connection)
+   en RabbitMQ.Client.Impl.Command.Transmit(Int32 channelNumber, Connection connection)
+   en RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   en RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   en RabbitMQ.Client.Impl.RecoveryAwareModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   en RabbitMQ.Client.Impl.AutorecoveringModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   en Adaptadores.AMQP.Recibir.Recibir.ServicioRecibirMensaje.SuscribirMensaje(Mensaje mensajes) en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP.Recibir\Recibir\ServicioRecibirMensaje.cs:línea 59

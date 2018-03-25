@@ -1,0 +1,7 @@
+2018-03-24 17:26:42.0858|ERROR|Infraestructura.Framework.Logs.ServicioLogs|None of the specified endpoints were reachable; Connection failed; El argumento especificado está fuera del intervalo de valores válidos.
+Nombre del parámetro: port
+   en RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   en RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   en Adaptadores.AMQP.Conexion.ServicioConexion.Conectar() en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP\Conexion\ServicioConexion.cs:línea 32
+2018-03-24 17:26:42.1349|ERROR|Infraestructura.Framework.Logs.ServicioLogs|El mensaje con el id:5no puedo ser enviado->Referencia a objeto no establecida como instancia de un objeto.
+   en Adaptadores.AMQP.Enviar.Mensajes.ServicioEnviarMensaje.PublicarMensaje(Mensaje mensajes) en C:\Users\globalbit\Documents\rr\Especializacion\entregable\AppPing\Adaptadores.AMQP\Enviar\Mensajes\ServicioEnviarMensaje.cs:línea 31
